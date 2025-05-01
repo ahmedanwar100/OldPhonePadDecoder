@@ -53,6 +53,7 @@ namespace OldPhonePadDecoder.Core
                     continue;
                 }
 
+                //if the tempStorage is empty or the digits are repeating then add in the tempStorage
                 if (tempStorage.Length == 0 || tempStorage[tempStorage.Length - 1] == current)
                 {
                     tempStorage.Append(current);
@@ -75,6 +76,7 @@ namespace OldPhonePadDecoder.Core
             {
                 result.Append(MapDigitToCharacter(tempStorage.ToString()));
 
+                //clear the temp storage
                 tempStorage.Clear();
             }
 
@@ -89,6 +91,7 @@ namespace OldPhonePadDecoder.Core
 
             string keyCharacters = string.Empty;
 
+            //find the mapping against the key(digit)
             switch (key)
             {
                 case '2': { keyCharacters = "ABC"; break; }
@@ -105,7 +108,7 @@ namespace OldPhonePadDecoder.Core
 
             if (string.IsNullOrEmpty(keyCharacters))
             {
-                throw new Exception($"Not found any character against the key:{key}");
+                throw new InvalidOperationException($"Not found any character against the key:{key}");
             }
 
             int index = (count - 1) % keyCharacters.Length;

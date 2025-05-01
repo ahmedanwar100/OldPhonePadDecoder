@@ -22,5 +22,29 @@ namespace OldPhonePadDecoder.Tests
             //Assert
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void OldPhonePad_InvalidDigit_ThrowsException()
+        {
+            Assert.Throws<InvalidOperationException>(() => Decoder.OldPhonePad("544221#"));
+        }
+
+        [Fact]
+        public void OldPhonePad_NullInput_ThrowsException()
+        {
+            Assert.Throws<ArgumentNullException>(() => Decoder.OldPhonePad(null));
+        }
+
+        [Fact]
+        public void OldPhonePad_EmptyInput_ThrowsException()
+        {
+            Assert.Throws<ArgumentNullException>(() => Decoder.OldPhonePad(""));
+        }
+
+        [Fact]
+        public void OldPhonePad_WhitespaceInput_ThrowsException()
+        {
+            Assert.Throws<ArgumentNullException>(() => Decoder.OldPhonePad(" "));
+        }
     }
 }

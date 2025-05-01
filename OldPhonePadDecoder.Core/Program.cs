@@ -8,4 +8,3 @@ Console.WriteLine(Decoder.OldPhonePad("66*6#"));
 Console.WriteLine(Decoder.OldPhonePad("2222#"));
 Console.WriteLine(Decoder.OldPhonePad("*#"));
 Console.WriteLine(Decoder.OldPhonePad("999337777#"));
-Console.WriteLine(Decoder.OldPhonePad("999337777"));
