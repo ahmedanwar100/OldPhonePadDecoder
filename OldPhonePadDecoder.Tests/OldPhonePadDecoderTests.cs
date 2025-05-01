@@ -1,0 +1,26 @@
+using System.Text;
+using Decoder = OldPhonePadDecoder.Core.OldPhonePadDecoder;
+
+namespace OldPhonePadDecoder.Tests
+{
+    public class OldPhonePadDecoderTests
+    {
+        [Theory]
+        [InlineData("33#", "E")]
+        [InlineData("2 22 222#", "ABC")]
+        [InlineData("4433555 555666096667775553#", "HELLO WORLD")]
+        [InlineData("8 88777444666*664#", "TURING")]
+        [InlineData("66*6#", "M")] // for backspace test
+        [InlineData("2222#", "A")] // for wrap-around test
+        [InlineData("*#", "")] // for empty after deletion
+        [InlineData("999337777#", "YES")]
+        public void OldPhonePad_ReturnsExpectedOutput(string input, string expected)
+        {
+            //Act
+            var result = Decoder.OldPhonePad(input);
+
+            //Assert
+            Assert.Equal(expected, result);
+        }
+    }
+}

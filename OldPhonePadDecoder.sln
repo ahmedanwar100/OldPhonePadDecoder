@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldPhonePadDecoder.Core", "OldPhonePadDecoder.Core\OldPhonePadDecoder.Core.csproj", "{1B1521D4-3161-4189-B539-FB5D8BA779D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldPhonePadDecoderTests", "OldPhonePadDecoder.Tests\OldPhonePadDecoderTests.csproj", "{FE0E2CEA-69DB-4ACB-A16C-4D87E4D6B2F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1B1521D4-3161-4189-B539-FB5D8BA779D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B1521D4-3161-4189-B539-FB5D8BA779D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B1521D4-3161-4189-B539-FB5D8BA779D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE0E2CEA-69DB-4ACB-A16C-4D87E4D6B2F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE0E2CEA-69DB-4ACB-A16C-4D87E4D6B2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE0E2CEA-69DB-4ACB-A16C-4D87E4D6B2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE0E2CEA-69DB-4ACB-A16C-4D87E4D6B2F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
