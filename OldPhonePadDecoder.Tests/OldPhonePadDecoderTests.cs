@@ -3,6 +3,10 @@ using Decoder = OldPhonePadDecoder.Core.OldPhonePadDecoder;
 
 namespace OldPhonePadDecoder.Tests
 {
+    /// <summary>
+    /// Unit tests for the OldPhonePad decoding logic.
+    /// Tests include standard decoding, backspaces, wrap-around, pauses, and invalid inputs.
+    /// </summary>
     public class OldPhonePadDecoderTests
     {
         [Theory]
@@ -32,19 +36,19 @@ namespace OldPhonePadDecoder.Tests
         [Fact]
         public void OldPhonePad_NullInput_ThrowsException()
         {
-            Assert.Throws<ArgumentNullException>(() => Decoder.OldPhonePad(null));
+            Assert.Throws<ArgumentException>(() => Decoder.OldPhonePad(null));
         }
 
         [Fact]
         public void OldPhonePad_EmptyInput_ThrowsException()
         {
-            Assert.Throws<ArgumentNullException>(() => Decoder.OldPhonePad(""));
+            Assert.Throws<ArgumentException>(() => Decoder.OldPhonePad(""));
         }
 
         [Fact]
         public void OldPhonePad_WhitespaceInput_ThrowsException()
         {
-            Assert.Throws<ArgumentNullException>(() => Decoder.OldPhonePad(" "));
+            Assert.Throws<ArgumentException>(() => Decoder.OldPhonePad(" "));
         }
     }
 }

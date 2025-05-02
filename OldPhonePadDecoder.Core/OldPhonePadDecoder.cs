@@ -6,13 +6,29 @@ using System.Threading.Tasks;
 
 namespace OldPhonePadDecoder.Core
 {
+    /// <summary>
+    /// Contains the implementation to decode keypad input into text using old phone key layout.
+    /// </summary>
     public class OldPhonePadDecoder
     {
+
+        /// <summary>
+        /// Decodes a keypad string input into a text based output using the old mobile phone layout.
+        /// </summary>
+        /// <param name="input">
+        /// A string containing numeric characters (2–9), `*` for backspace, and `#` for send.
+        /// A space indicates a pause to allow typing the same button multiple times for different letters.
+        /// </param>
+        /// <returns>The decoded text up to the first `#` character.</returns>
+        /// <example>
+        /// Input: "8 88777444666*664#"  
+        /// Output: "TURING"
+        /// </example>
         public static string OldPhonePad(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
-                throw new ArgumentNullException(nameof(input), "Provided input should have a proper value.");
+                throw new ArgumentException(nameof(input), "Provided input should have a proper value.");
             }
 
             //to store the final result
