@@ -1,4 +1,3 @@
-using System.Text;
 using Decoder = OldPhonePadDecoder.Core.OldPhonePadDecoder;
 
 namespace OldPhonePadDecoder.Tests
