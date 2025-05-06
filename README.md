@@ -54,5 +54,5 @@ Tests include:
 ## 🚀 How to Run
 
 1. Clone the repository
-2. Open in Visual Studio or `dotnet run`
-3. Run tests via `dotnet test`
+2. Open in Visual Studio or go to the folder **OldPhonePadDecoder.Core** and type `dotnet run` in the cmd.
+3. Run tests by going under the **OldPhonePadDecoder.Tests** folder and type `dotnet test` in the cmd.
