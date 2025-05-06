@@ -54,5 +54,5 @@ Tests include:
 ## 🚀 How to Run
 
 1. Clone the repository
-2. Open in Visual Studio or `dotnet build`
+2. Open in Visual Studio or `dotnet run`
 3. Run tests via `dotnet test`
